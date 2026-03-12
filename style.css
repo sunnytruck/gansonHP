@@ -1,0 +1,385 @@
+/*
+  岩尊けいと 公式イメージHP
+  黒・灰・石・鈍い光を基調にした静的デザイン
+*/
+
+:root {
+  --bg: #0b0c0e;
+  --bg-soft: #121418;
+  --stone: #d4d0c5;
+  --stone-dark: #8d8a82;
+  --line: #2b2f36;
+  --accent: #b89a58;
+  --accent-cold: #9ec8d7;
+  --text: #ece9e3;
+  --text-muted: #b7b3aa;
+  --header-h: 68px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 15%, #1d1f24 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, #161a1f 0%, transparent 35%),
+    linear-gradient(145deg, #0a0b0d 0%, #101318 45%, #0a0b0d 100%);
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+/* 霧と岩肌ノイズの演出 */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(158, 200, 215, 0.08), transparent 45%),
+    radial-gradient(circle at 70% 75%, rgba(184, 154, 88, 0.08), transparent 38%),
+    repeating-linear-gradient(
+      -25deg,
+      rgba(255, 255, 255, 0.015) 0 2px,
+      rgba(0, 0, 0, 0.015) 2px 4px
+    );
+  pointer-events: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-h);
+  padding: 0 20px;
+  backdrop-filter: blur(8px);
+  background: rgba(10, 12, 15, 0.78);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--stone);
+}
+
+.global-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.global-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.global-nav a:hover,
+.global-nav a:focus-visible {
+  color: var(--text);
+  background: rgba(158, 200, 215, 0.1);
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(18, 20, 24, 0.8);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background: var(--stone);
+}
+
+.section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 88px 20px;
+  scroll-margin-top: calc(var(--header-h) + 14px);
+}
+
+.hero {
+  min-height: calc(100vh - var(--header-h));
+  display: grid;
+  place-content: center;
+  gap: 10px;
+}
+
+.hero-kana {
+  margin: 0;
+  color: var(--stone-dark);
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 7vw, 4.6rem);
+  line-height: 1.15;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 20px rgba(158, 200, 215, 0.2);
+}
+
+.hero-copy {
+  margin: 0;
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  color: var(--stone);
+}
+
+.hero-text {
+  margin: 0;
+  color: var(--text-muted);
+  max-width: 40ch;
+}
+
+.scroll-guide {
+  margin-top: 14px;
+  width: fit-content;
+  color: var(--accent-cold);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  border-bottom: 1px solid rgba(158, 200, 215, 0.4);
+}
+
+.section-head {
+  margin-bottom: 26px;
+}
+
+.section-en {
+  margin: 0;
+  color: var(--stone-dark);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+h2 {
+  margin: 6px 0 0;
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  letter-spacing: 0.07em;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card,
+.track-card,
+.visual-card,
+.news-list li {
+  background: linear-gradient(160deg, rgba(28, 30, 35, 0.9), rgba(18, 20, 24, 0.92));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.card p,
+.track-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.accent-card {
+  border-color: rgba(184, 154, 88, 0.35);
+  box-shadow: 0 0 28px rgba(184, 154, 88, 0.08);
+}
+
+.music-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.track-card {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.track-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(158, 200, 215, 0.45);
+}
+
+.track-status {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.visual-card {
+  min-height: 180px;
+  display: grid;
+  place-items: end start;
+}
+
+.placeholder {
+  background:
+    linear-gradient(145deg, rgba(38, 42, 48, 0.88), rgba(20, 22, 27, 0.92)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.02) 0 6px,
+      rgba(0, 0, 0, 0.02) 6px 12px
+    );
+}
+
+.visual-card figcaption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.news-list time {
+  color: var(--accent-cold);
+  font-size: 0.84rem;
+}
+
+.news-list p {
+  margin: 0;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding: 36px 20px 50px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.footer-name {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--stone);
+}
+
+.sns-links {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sns-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.sns-links a:hover {
+  color: var(--text);
+  border-color: rgba(158, 200, 215, 0.5);
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+/* 控えめなフェードイン */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* モバイル調整 */
+@media (max-width: 920px) {
+  .music-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .two-col,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .global-nav {
+    position: absolute;
+    top: var(--header-h);
+    right: 10px;
+    left: 10px;
+    padding: 10px;
+    background: rgba(10, 12, 15, 0.96);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    display: none;
+    flex-direction: column;
+  }
+
+  .global-nav.is-open {
+    display: flex;
+  }
+
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+}
+
+@media (max-width: 520px) {
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+}

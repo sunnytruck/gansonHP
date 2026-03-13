@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 900" role="img" aria-labelledby="t d">
+  <title id="t">岩尊けいと 3面図</title>
+  <desc id="d">岩尊けいとの正面・側面・背面を並べた3面図スタイルのビジュアル。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11151c"/>
+      <stop offset="1" stop-color="#0d1016"/>
+    </linearGradient>
+    <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a88a58"/>
+      <stop offset="1" stop-color="#756143"/>
+    </linearGradient>
+  </defs>
+  <rect width="1500" height="900" fill="url(#bg)"/>
+  <g transform="translate(120 90)"><rect x="0" y="130" width="220" height="280" rx="55" fill="url(#rock)"/><rect x="-60" y="140" width="85" height="85" rx="24" fill="url(#rock)"/><rect x="195" y="140" width="85" height="85" rx="24" fill="url(#rock)"/><rect x="-35" y="230" width="65" height="220" rx="30" fill="url(#rock)"/><rect x="200" y="230" width="65" height="220" rx="30" fill="url(#rock)"/><rect x="30" y="400" width="65" height="260" rx="30" fill="url(#rock)"/><rect x="130" y="400" width="65" height="260" rx="30" fill="url(#rock)"/><circle cx="110" cy="65" r="74" fill="url(#rock)"/><text x="-35" y="200" fill="#f0ddaa" font-size="46" font-family="'Yu Gothic',sans-serif" font-weight="700">じ</text><text x="220" y="200" fill="#f0ddaa" font-size="46" font-family="'Yu Gothic',sans-serif" font-weight="700">と</text><text x="58" y="290" fill="#f0ddaa" font-size="40" font-family="'Yu Gothic',sans-serif" font-weight="700">じっと教</text></g>
+  <g transform="translate(635 90)"><rect x="0" y="130" width="180" height="280" rx="55" fill="url(#rock)"/><rect x="125" y="145" width="85" height="90" rx="24" fill="url(#rock)"/><rect x="135" y="230" width="78" height="235" rx="30" fill="url(#rock)"/><rect x="30" y="400" width="62" height="260" rx="30" fill="url(#rock)"/><rect x="95" y="400" width="62" height="260" rx="30" fill="url(#rock)"/><circle cx="95" cy="65" r="74" fill="url(#rock)"/><text x="146" y="208" fill="#f0ddaa" font-size="44" font-family="'Yu Gothic',sans-serif" font-weight="700">と</text></g>
+  <g transform="translate(1080 90)"><rect x="0" y="130" width="220" height="280" rx="55" fill="url(#rock)"/><rect x="-60" y="140" width="85" height="85" rx="24" fill="url(#rock)"/><rect x="195" y="140" width="85" height="85" rx="24" fill="url(#rock)"/><rect x="-35" y="230" width="65" height="220" rx="30" fill="url(#rock)"/><rect x="200" y="230" width="65" height="220" rx="30" fill="url(#rock)"/><rect x="30" y="400" width="65" height="260" rx="30" fill="url(#rock)"/><rect x="130" y="400" width="65" height="260" rx="30" fill="url(#rock)"/><circle cx="110" cy="65" r="74" fill="url(#rock)"/><text x="-35" y="200" fill="#f0ddaa" font-size="46" font-family="'Yu Gothic',sans-serif" font-weight="700">じ</text><text x="220" y="200" fill="#f0ddaa" font-size="46" font-family="'Yu Gothic',sans-serif" font-weight="700">と</text><circle cx="110" cy="268" r="60" fill="none" stroke="#f0ddaa" stroke-opacity="0.7" stroke-width="6"/></g>
+</svg>

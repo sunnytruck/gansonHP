@@ -54,7 +54,9 @@ body {
   padding: 0 18px; border-bottom: 1px solid var(--line);
   background: rgba(8, 10, 13, 0.82); backdrop-filter: blur(8px);
 }
-.logo { color: var(--stone-0); text-decoration: none; font-weight: 700; letter-spacing: 0.08em; }
+.logo { color: var(--stone-0); text-decoration: none; font-weight: 700; letter-spacing: 0.08em; position: relative; padding-left: 34px; }
+.logo::before { content:"じ"; position:absolute; left:0; top:50%; transform:translateY(-50%); color:var(--gold-dull); border:1px solid rgba(178,149,95,.45); width:24px; height:24px; border-radius:50%; display:grid; place-items:center; font-size:.76rem; }
+.logo::after { content:"と"; position:absolute; left:16px; top:-2px; color:var(--stone-2); font-size:.66rem; }
 .global-nav { display: flex; gap: 8px; }
 .global-nav a {
   color: var(--text-muted); text-decoration: none; font-size: 0.9rem; padding: 6px 10px; border-radius: 7px;
